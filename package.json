@@ -1,0 +1,27 @@
+{
+  "name": "typings-npm-react-notification-system",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Typescript typings for react-notification-system",
+  "scripts": {
+    "build": "npm run prepare && npm run bundle && npm run build-ts",
+    "prepare": "echo installing typings... && cd 0.2.7 && typings install",
+    "build-ts": "echo building... && tsc -p 0.2.7",
+    "bundle": "echo bundling... && cd 0.2.7 && typings bundle -o out/index.d.ts",
+    "test": "echo runing tests... && tsc -p 0.2.7/test",
+    "build+test": "npm run build && npm run test",
+    "cleanup-typings": "echo Removing typings folders... && for /d /r . %d in (typings) do @if exist %d rd /s/q %d",
+    "cleanup-out": "echo Removing out folders... && for /d /r . %d in (out) do @if exist %d rd /s/q %d",
+    "cleanup": "npm run cleanup-typings && npm run cleanup-out"
+  },
+  "author": "Giedrius Grabauskas <https://github.com/GiedriusGrabauskas>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/QuatroTypings/npm-react-notification-system/issues"
+  },
+  "homepage": "https://github.com/QuatroTypings/npm-react-notification-system",
+  "devDependencies": {
+    "typescript": "^1.8.10",
+    "typings": "^1.0.4"
+  }
+}

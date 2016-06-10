@@ -1,0 +1,9 @@
+{
+  "name": "react-notification-system",
+  "homepage": "https://github.com/igorprado/react-notification-system",
+  "version": "0.2.7",
+  "main": "index.d.ts",
+  "dependencies": {
+    "react": "registry:npm/react#15.0.1+20160601175240"
+  }
+}
