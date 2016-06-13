@@ -1,11 +1,10 @@
 import * as React from 'react';
 import * as NotificationSystem from 'react-notification-system';
-import * as NotificationSystemContracts from 'react-notification-system/contracts';
 
 class MyComponent extends React.Component<any, any> {
-    private notificationSystem: NotificationSystemContracts.System = null;
+    private notificationSystem: NotificationSystem.System = null;
 
-    private notification: NotificationSystemContracts.Notification = {
+    private notification: NotificationSystem.Notification = {
         message: 'Notification message',
         level: 'success',
         action: {
@@ -21,7 +20,7 @@ class MyComponent extends React.Component<any, any> {
     }
 
     componentDidMount() {
-        this.notificationSystem = this.refs['notificationSystem'] as NotificationSystemContracts.System;
+        this.notificationSystem = this.refs['notificationSystem'] as NotificationSystem.System;
         this.addNotification();
     }
 
@@ -39,7 +38,7 @@ class MyComponent extends React.Component<any, any> {
             }
         };
 
-        var attributes: NotificationSystemContracts.Attributes = {            
+        var attributes: NotificationSystem.Attributes = {            
             style: {
                 Containers: {
                     DefaultStyle: {
@@ -54,6 +53,6 @@ class MyComponent extends React.Component<any, any> {
             }
         };               
 
-        return React.createElement(NotificationSystem, { title: "NotificationTitile", style: style, } as NotificationSystemContracts.Attributes);
+        return React.createElement(NotificationSystem, { title: "NotificationTitile", style: style, } as NotificationSystem.Attributes);
     }
 }
